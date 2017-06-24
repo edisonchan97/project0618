@@ -1,7 +1,8 @@
 <template>
-  <div class="music">
-    <hello></hello>
-    <router-view></router-view>
+  <div class="music-list">
+    <hello>
+
+    </hello>
      <hello-footer></hello-footer>
   </div>
 </template>
@@ -14,28 +15,18 @@ export default {
 
   data () {
     return {
-    albums:[]
+
     }
   },
   components:{
       Hello,
       HelloFooter
     },
-  mounted(){
-    this.$store.dispatch('changeTitle',['music','rgb(0, 150, 136)','<']);
-
-
-        Axios.get('../../../static/musiclist.json').then((res)=>{
-          this.albums =res.data.albums;
-        });
-
-  },
-      methods:{
-        changeTitle(title)
-        {
-          this.$store.dispatch('changeTitle', [title, 'rgb(0, 150, 136)', '<']);
+      mounted(){
+//          this.$store.dispatch('changeTitle', ['nice','rgb(0, 150, 136)','<']);
+//      this.$store.dispatch('changeBgcolor', bgcolor)
         }
-      }
+
 }
 </script>
 

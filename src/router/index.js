@@ -7,7 +7,9 @@ import MovieTop250 from '@/components/movie/MovieTop250'
 import Music from '@/components/music/Music'
 import Photo from '@/components/photo/Photo'
 import Book from '@/components/book/Book'
+import MusicAlbums from '@/components/music/MusicAlbums'
 import MusicList from '@/components/music/MusicList'
+//import MusicList from '@/components/music/MusicList'
 
 Vue.use(Router)
 
@@ -31,12 +33,20 @@ export default new Router({
       redirect: '/movie/top250'
     },
     {
-    path: '/music',
-  component: Music
+    path:'/music',
+  redirect:'/music/music-albums'
 },
+    //{
+    //  path: '/music/music-list/:id',
+    //  component: MusicList
+    //},
     {
-      path: '/music/music-list/:id',
-      component: MusicList
+      path:'/music',
+      component:Music,
+      children:[//细节啊啊 ！！！！
+        {path:'/music/music-albums',component:MusicAlbums},
+        {path:'/music/music-list/:id',component:MusicList}
+      ]
     },
     {
       path: '/photo',
