@@ -9,7 +9,8 @@ import Photo from '@/components/photo/Photo'
 import Book from '@/components/book/Book'
 import MusicAlbums from '@/components/music/MusicAlbums'
 import MusicList from '@/components/music/MusicList'
-//import MusicList from '@/components/music/MusicList'
+import PhotoList from '@/components/photo/PhotoList'
+import PhotoShow from '@/components/photo/PhotoShow'
 
 Vue.use(Router)
 
@@ -25,7 +26,7 @@ export default new Router({
       children:[//细节啊啊 ！！！！
         {path:'/movie/top250',component:MovieTop250},
         {path:'/movie/hot',component:MovieHot},
-        {path:'/movie/coming',compoent:MovieComing}
+        {path:'/movie/coming',component:MovieComing}
       ]
     },
     {
@@ -50,7 +51,16 @@ export default new Router({
     },
     {
       path: '/photo',
-      component: Photo
+      redirect:'/photo/photo-list'
+    },
+    {
+      path: '/photo',
+      component: Photo,
+      children:[
+        {path:'/photo/photo-list',component:PhotoList},
+        {path:'/photo/photo-show/:src',component:PhotoShow}
+
+      ]
     }
     ,   {
       path: '/book',

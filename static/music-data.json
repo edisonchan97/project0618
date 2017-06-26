@@ -1,0 +1,60 @@
+{
+  "musicData": [
+    {
+      "title":"刚好遇见你",
+      "author":"李玉刚",
+      "src": "static/刚好遇见你.mp3",
+      "musicImgSrc": "static/img/1.jpg",
+      "lrc":"刚好遇见你-李玉刚.lrc"
+    },
+    {
+      "title":"我的一个道姑朋友",
+      "author":"以冬",
+      "src": "static/我的一个道姑朋友.mp3",
+      "musicImgSrc":  "static/img/1.jpg",
+      "lrc":""
+    },
+    {
+      "title":"我要你",
+      "author":"任素汐",
+      "src": "static/我的一个道姑朋友.mp3",
+      "musicImgSrc": "static/img/1.jpg",
+      "lrc":"我要你.lrc"
+    },
+    {
+      "title":"成都",
+      "author":"赵雷",
+      "src":"http://m2.music.126.net/7o5D4dA6271VktgawcbZFA==/18665309393829604.mp3",
+      "musicImgSrc": "http://p4.music.126.net/34YW1QtKxJ_3YnX9ZzKhzw==/2946691234868155.jpg",
+      "lrc":"成都-赵雷.lrc"
+    },
+    {
+      "title":"多幸运",
+      "author":"韩安旭",
+      "src":"static/我的一个道姑朋友.mp3",
+      "musicImgSrc":  "static/img/1.jpg",
+      "lrc":"多幸运.lrc"
+    },
+    {
+      "title":"假如爱有天意",
+      "author":"李健",
+      "src": "static/我的一个道姑朋友.mp3",
+      "musicImgSrc":  "static/img/1.jpg",
+      "lrc":"假如爱有天意.lrc"
+    },
+    {
+      "title":"七月上",
+      "author":"未知",
+      "src": "static/我的一个道姑朋友.mp3",
+      "musicImgSrc":  "static/img/1.jpg",
+      "lrc":"七月.lrc"
+    },
+    {
+      "title":"咱们屯里人(粤语版)",
+      "author":"未知",
+      "src": "static/我的一个道姑朋友.mp3",
+      "musicImgSrc":  "static/img/1.jpg",
+      "lrc":"咱们屯里人.lrc"
+    }
+  ]
+}

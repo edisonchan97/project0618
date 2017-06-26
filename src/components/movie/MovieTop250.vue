@@ -24,7 +24,8 @@ export default {
 
   data () {
     return {
-    movieList:[]
+    movieList:[],
+      show:false
     }
   },
  mounted:function(){

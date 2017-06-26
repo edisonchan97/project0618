@@ -12,7 +12,8 @@ Vue.use(Vuex)
 const state = {
   title:'movie',
   bgColor:'rgb(33, 150, 243)',
-  back:'首页'
+  back:'首页',
+  photoList:[]
 }
 
 //定义动作 事件处理方法
@@ -21,16 +22,16 @@ const mutations = {
   state.title = status[0];
   state.bgColor = status[1];
   state.back = status[2];
-}
-// ,
-//changeBgcolor(state,status){
-//  state.bgColor = status[1];
-//}
+},
+photoList(state,status){
+  state.photoList = status;
+},
 }
 
 //对外的事件方法
 const actions = {
-    changeTitle:({commit},status)=>commit('changeTitle',status)
+    changeTitle:({commit},status)=>commit('changeTitle',status),
+  photoList:({commit},status)=>commit('photoList',status)
   //,
   //changeBgcolor:({commit},status)=>commit('changeBgcolor',status)
 }

@@ -22,7 +22,39 @@
   import Axios from 'axios'
   import $ from 'jquery'
 
-  export default {}
+  export default {
+    data() {
+    return {
+      movieList:[],
+      show:false
+    }
+  },
+    mounted:function(){
+      this.loadData();
+      var _this =this;
+      $(window).scroll(function(){
+        var windowHeight= $(this).height();
+        var scrollTop= $(this).scrollTop();
+        var height= $(document).height();
+        if(windowHeight + scrollTop >= height){
+          _this.show =true;
+          _this.loadData();
+        }
+      });
+
+    },
+    methods:{
+      loadData(){
+          var length=this.movieList.length;
+          Axios.get(API_PROXY+'https://api.douban.com/v2/movie/in_theaters?count=10&start='+this.movieList.length+'')
+        .then((res)=>{
+      this.movieList =this.movieList.concat(res.data.subjects);
+    this.show=false;
+  });
+  }
+  }
+  }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

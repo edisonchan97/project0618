@@ -23,8 +23,7 @@
   import $ from 'jquery'
 
   export default {
-
-    data () {
+    data() {
     return {
       movieList:[],
       show:false
@@ -45,16 +44,17 @@
 
   },
   methods:{
-    loadData(){
-      var length=this.movieList.length;
-      Axios.get(API_PROXY+'https://api.douban.com/v2/movie/coming_soon?count=10&start='+this.movieList.length+'')
-        .then((res)=>{
-        this.movieList =this.movieList.concat(res.data.subjects);
-      this.show=false;
-    });
+        loadData(){
+          var length=this.movieList.length;
+          Axios.get(API_PROXY+'https://api.douban.com/v2/movie/coming_soon?count=10&start='+this.movieList.length+'')
+            .then((res)=>{
+            this.movieList =this.movieList.concat(res.data.subjects);
+          this.show=false;
+        });
+      }
+    }
   }
-  }
-  }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
